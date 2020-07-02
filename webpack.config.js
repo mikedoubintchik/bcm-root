@@ -6,7 +6,7 @@ module.exports = (env) => ({
   entry: path.resolve(__dirname, "src/root-config"),
   output: {
     filename: "polyglot-mf-root-config.js",
-    libraryTarget: "system",
+    libraryTarget: "amd",
     path: path.resolve(__dirname, "www"),
   },
   devtool: "sourcemap",
@@ -17,6 +17,10 @@ module.exports = (env) => ({
         test: /\.js$/,
         exclude: /node_modules/,
         use: [{ loader: "babel-loader" }],
+      },
+      {
+        test: /\.html$/,
+        use: 'raw-loader',
       },
     ],
   },
