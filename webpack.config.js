@@ -20,7 +20,11 @@ module.exports = (env) => ({
       },
       {
         test: /\.html$/,
-        use: 'raw-loader',
+        use: "raw-loader",
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
