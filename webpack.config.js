@@ -43,8 +43,8 @@ module.exports = () => ({
       inject: false,
       template: "src/index.ejs",
       templateParameters: {
-        isLegacy: env.activeDev === "legacy",
-        isReact: env.activeDev === "react",
+        isLegacy: env && env.activeDev === "legacy",
+        isReact: env && env.activeDev === "react",
       },
     }),
     new CleanWebpackPlugin(),
