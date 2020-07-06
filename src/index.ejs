@@ -6,15 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Polyglot Microfrontends</title>
   <meta name="importmap-type" content="systemjs-importmap" />
-  <script type="systemjs-importmap" src="https://storage.googleapis.com/polyglot.microfrontends.app/importmap.json"></script>
-  <% if (isLocal) { %>
+  <!-- <script type="systemjs-importmap" src="https://storage.googleapis.com/polyglot.microfrontends.app/importmap.json"></script> -->
   <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js"
+      {
+        "imports": {
+          "@polyglot-mf/root-config": "https://polyglot.microfrontends.app/root-config/f1b4718e2525a412283312ccc6cc998f7ab0c45e/polyglot-mf-root-config.js",
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.3.4/lib/system/single-spa.min.js",
+          "react": "https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js",
+          "@polyglot-mf/styleguide": "https://polyglot.microfrontends.app/styleguide/5e93917afbdece63478b7cc5174f5faab40d6fa8/polyglot-mf-styleguide.js",
+          "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js",
+          "@polyglot-mf/navbar": "https://polyglot.microfrontends.app/navbar/04cdbee08582bcdbc51765406438769fc6d2e31a/polyglot-mf-navbar.js",
+          "@polyglot-mf/clients": "https://polyglot.microfrontends.app/clients/8f4d8dcdf204b7dcad72faf5b602a9040aed1cf5/js/app.js"
+        }
       }
-    }
   </script>
+  <% if (isLegacy) { %>
+  <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js"
+        }
+      }
+    </script>
+  <% } %>
+  <% if (isReact) { %>
+  <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js",
+          "@polyglot-mf/clients": "https://localhost:8500/js/app.js"
+        }
+      }
+    </script>
   <% } %>
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides/dist/import-map-overrides.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
