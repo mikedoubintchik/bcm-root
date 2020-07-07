@@ -15,8 +15,6 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@types/systemjs": "^6.1.0",
-    "angular": "^1.8.0",
-    "angular-ui-router": "^1.0.26",
     "babel-eslint": "^11.0.0-beta.2",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -33,6 +31,7 @@
     "pretty-quick": "^2.0.1",
     "raw-loader": "^4.0.1",
     "serve": "^11.2.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
