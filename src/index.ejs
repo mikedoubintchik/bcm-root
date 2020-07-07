@@ -6,14 +6,14 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Polyglot Microfrontends</title>
     <meta content="systemjs-importmap" name="importmap-type" />
-    <script
+    <!-- <script
       type="systemjs-importmap"
       src="https://storage.googleapis.com/polyglot.microfrontends.app/importmap.json"
-    ></script>
-    <!-- <script type="systemjs-importmap">
+    ></script> -->
+    <script type="systemjs-importmap">
       {
         "imports": {
-          "@polyglot-mf/root-config": "https://polyglot.microfrontends.app/root-config/f1b4718e2525a412283312ccc6cc998f7ab0c45e/polyglot-mf-root-config.js",
+          "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js",
           "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.3.4/lib/system/single-spa.min.js",
           "react": "https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js",
           "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js",
@@ -25,7 +25,7 @@
           "@polyglot-mf/account-settings": "https://polyglot.microfrontends.app/account-settings/379b52175c9f274743f7e469a7e3477b6ed6b927/polyglot-mf-account-settings.js"
         }
       }
-    </script> -->
+    </script>
     <% if (isLegacy) { %>
     <script type="systemjs-importmap">
       {
