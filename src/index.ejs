@@ -6,10 +6,6 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Polyglot Microfrontends</title>
     <meta content="systemjs-importmap" name="importmap-type" />
-    <!-- <script
-      type="systemjs-importmap"
-      src="https://storage.googleapis.com/polyglot.microfrontends.app/importmap.json"
-    ></script> -->
     <script type="systemjs-importmap">
       {
         "imports": {
@@ -21,8 +17,7 @@
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js",
           "@polyglot-mf/navbar": "https://polyglot.microfrontends.app/navbar/04cdbee08582bcdbc51765406438769fc6d2e31a/polyglot-mf-navbar.js",
-          "@polyglot-mf/clients": "https://polyglot.microfrontends.app/clients/8f4d8dcdf204b7dcad72faf5b602a9040aed1cf5/js/app.js",
-          "@polyglot-mf/account-settings": "https://polyglot.microfrontends.app/account-settings/379b52175c9f274743f7e469a7e3477b6ed6b927/polyglot-mf-account-settings.js"
+          "@polyglot-mf/clients": "https://polyglot.microfrontends.app/clients/8f4d8dcdf204b7dcad72faf5b602a9040aed1cf5/js/app.js"
         }
       }
     </script>
@@ -30,7 +25,7 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js"
+          "@bcm/bcm-legacy": "http://localhost:8080/bcm-legacy.js"
         }
       }
     </script>
@@ -38,7 +33,6 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js",
           "@polyglot-mf/clients": "https://localhost:8500/js/app.js"
         }
       }

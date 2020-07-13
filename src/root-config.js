@@ -1,13 +1,12 @@
-import * as BCMLegacy from "@bcm/bcm-legacy";
 
 import { registerApplication, start } from "single-spa";
 
 if (process.env.activeDev === "legacy") {
-  console.log("legacy");
+  console.log("Active Dev: legacy");
 
   registerApplication({
     name: "@bcm/bcm-legacy",
-    app: BCMLegacy,
+    app: () => System.import("@bcm/bcm-legacy"),
     activeWhen: "/settings",
   });
 
@@ -23,11 +22,11 @@ if (process.env.activeDev === "legacy") {
     activeWhen: "/clients",
   });
 } else if (process.env.activeDev === "react") {
-  console.log("react");
+  console.log("Active Dev: react");
 
   registerApplication({
     name: "@bcm/bcm-legacy",
-    app: BCMLegacy,
+    app: require("@bcm/bcm-legacy"),
     activeWhen: "/settings",
   });
 
@@ -43,11 +42,11 @@ if (process.env.activeDev === "legacy") {
     activeWhen: "/clients",
   });
 } else {
-  console.log("prod");
+  console.log("Active Dev: prod");
 
   registerApplication({
     name: "@bcm/bcm-legacy",
-    app: BCMLegacy,
+    app: require("@bcm/bcm-legacy"),
     activeWhen: "/settings",
   });
 
