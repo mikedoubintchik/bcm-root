@@ -1,3 +1,4 @@
+import * as BCMLegacy from '@bcm/bcm-legacy';
 
 import { registerApplication, start } from "single-spa";
 
@@ -46,7 +47,8 @@ if (process.env.activeDev === "legacy") {
 
   registerApplication({
     name: "@bcm/bcm-legacy",
-    app: require("@bcm/bcm-legacy"),
+    // app: require("@bcm/bcm-legacy"),
+    app: BCMLegacy,
     activeWhen: "/settings",
   });
 
